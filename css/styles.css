@@ -36,7 +36,6 @@ body {
 .container {
 	width: 1158px;
 	margin: 0 auto;
-	outline: 1px solid red;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -141,10 +140,16 @@ body {
 
 /* <!--Hero section--> */
 .hero {
-	background: var(--background-color-1);
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 188px;
 	padding-bottom: 188px;
 	text-align: center;
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-br.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .hero-subject {
@@ -187,11 +192,27 @@ body {
 	padding: 0;
 	list-style: none;
 }
+.advantages-icon {
+	display: flex;
+	flex-wrap: wrap;
+}
+.advantages-list-icon {
+}
 
 .advantages-item {
 	flex-basis: calc((100% - 72px) / 4);
 }
-
+.advantages-icon {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	background: #f4f4fd;
+	border-radius: 4px;
+	padding: 24px 100px;
+	margin-bottom: 8px;
+}
+.advantages-list-icon {
+}
 .advantages-item-subtitle {
 	color: var(--main-title-color);
 	margin-bottom: var(--margin-subtitle);
@@ -255,13 +276,91 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	margin-bottom: 8px;
+}
+.team-social-list {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+.team-social-iteam {
+	width: 40px;
+	height: 40px;
+}
+.team-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: var(--accent-color);
+}
+.team-social-link:is(:hover, :focus) {
+	background-color: var(--hover-focus-color);
+}
+.team-social-icon {
 }
 /* <!--/Team section--> */
+
+/* <!-- Customers section --> */
+.customers {
+	padding: 120px 0;
+}
+.customers-title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	letter-spacing: 0.02em;
+	color: var(--main-title-color);
+	margin-bottom: var(--margin-title);
+}
+.customers-list {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+.customers-iteam {
+	width: 168px;
+	height: 88px;
+}
+.customers-iteam-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	color: #8e8f99;
+	border: 1px solid #8e8f99;
+	border-radius: 4px;
+}
+.customers-iteam-link:is(:hover, :focus) {
+	border: 1px solid var(--hover-focus-color);
+	color: var(--hover-focus-color);
+}
+
+.costomers-social-icon {
+	fill: currentColor;
+}
+.costomers-social-icon:is(:hover, :focus) {
+	color: var(--hover-focus-color);
+}
+
+/* <!-- Customers section --> */
+
 .footer {
 	background: var(--background-color-1);
 	padding: 100px 0;
 }
-
+.footer-container {
+	display: flex;
+	gap: 120px;
+}
+.logo-container {
+}
 .footer-logo {
 	font-family: "Raleway", sans-serif;
 	font-weight: 800;
@@ -282,6 +381,41 @@ body {
 	color: var(--footer-text);
 	width: 264px;
 	margin-top: 16px;
+}
+.social-media {
+}
+.footer-subject {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--hero-color);
+	margin-bottom: 16px;
+}
+.footer-list {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	width: 208px;
+}
+
+.footer-item {
+	width: 40px;
+	height: 40px;
+}
+.footer-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: var(--main-description-color);
+}
+.footer-link:is(:hover, :focus) {
+	background-color: #31d0aa;
+}
+.footer-icon {
 }
 
 /* <!--Hero and portfolio section-->*/
@@ -325,7 +459,14 @@ body {
 	margin-bottom: 0;
 }
 .portfolio-item-link {
+	display: block;
 }
+
+.portfolio-item-link:is(:hover, :focus) {
+	border: 1px solid #f4f4fd;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-item-container {
 	border: 1px solid var(--footer-text);
 	border-top: none;
