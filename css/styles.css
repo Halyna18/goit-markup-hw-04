@@ -7,6 +7,8 @@
 	--background-color-1: #2e2f42;
 	--background-color-2: #f4f4fd;
 	--footer-text: #e7e9fc;
+	--hover-focus-color-2: #31d0aa;
+	--icon-color: #8e8f99;
 	--secondary-font: "Raleway", sans-serif;
 	--margin-subtitle: 8px;
 	--margin-title: 72px;
@@ -193,8 +195,8 @@ body {
 	list-style: none;
 }
 .advantages-icon {
-	display: flex;
-	flex-wrap: wrap;
+	width: 100%;
+	height: 112px;
 }
 .advantages-list-icon {
 }
@@ -205,10 +207,9 @@ body {
 .advantages-icon {
 	display: flex;
 	justify-content: center;
-	align-self: center;
-	background: #f4f4fd;
+	align-items: center;
+	background: var(--background-color-2);
 	border-radius: 4px;
-	padding: 24px 100px;
 	margin-bottom: 8px;
 }
 .advantages-list-icon {
@@ -260,7 +261,7 @@ body {
 	gap: 24px;
 }
 .team-item {
-	background: #ffffff;
+	background: var(--hero-color);
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 	border-radius: 0px 0px 4px 4px;
 	text-align: center;
@@ -333,8 +334,8 @@ body {
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	color: #8e8f99;
-	border: 1px solid #8e8f99;
+	color: var(--icon-color);
+	border: 1px solid var(--icon-color);
 	border-radius: 4px;
 }
 .customers-iteam-link:is(:hover, :focus) {
@@ -357,7 +358,7 @@ body {
 }
 .footer-container {
 	display: flex;
-	gap: 120px;
+	align-self: center;
 }
 .logo-container {
 }
@@ -383,6 +384,7 @@ body {
 	margin-top: 16px;
 }
 .social-media {
+	margin-left: 120px;
 }
 .footer-subject {
 	font-weight: 500;
@@ -396,7 +398,6 @@ body {
 	display: flex;
 	justify-content: center;
 	gap: 16px;
-	width: 208px;
 }
 
 .footer-item {
@@ -413,7 +414,7 @@ body {
 	background-color: var(--main-description-color);
 }
 .footer-link:is(:hover, :focus) {
-	background-color: #31d0aa;
+	background-color: var(--hover-focus-color-2);
 }
 .footer-icon {
 }
@@ -463,7 +464,6 @@ body {
 }
 
 .portfolio-item-link:is(:hover, :focus) {
-	border: 1px solid #f4f4fd;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
